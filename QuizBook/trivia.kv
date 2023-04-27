@@ -1,0 +1,149 @@
+#:import Gradient kivy_gradient.Gradient
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+
+<MD3Card>
+    width: len(self.text) * 50
+    text_size: self.width, None
+    halign:'center'
+    font_size: 18
+    background_color: 1, 1, 1, 0
+    bg_color: get_color_from_hex("2c382d")
+    on_release: app.quiz(self.text, self)
+    bold: True
+    italic: True
+    color: get_color_from_hex("2c382d")
+    text: ""
+    icon:
+    canvas.before:
+        Color:
+            rgb: root.bg_color
+        Line:
+            width: 1.5
+            rounded_rectangle: self.x-8, self.y-8, self.width+8, self.height+8, 10, 10, 10, 10, 100
+    Label:
+        text: root.text
+        color: get_color_from_hex("2c382d")
+    MDIcon:
+        icon: root.icon
+        halign: "right"
+        
+<OptionButton>
+    width: len(self.text) * 50
+    text_size: self.width, None
+    halign:'center'
+    font_size: 18
+    background_color: 1, 1, 1, 0
+    bg_color: get_color_from_hex("c1cbe3")
+    on_release: app.quiz(self.text, self)
+    bold: True
+    italic: True
+    color: get_color_from_hex("2c382d")
+    
+    canvas.before:
+        Color:
+            rgb: root.bg_color
+        # RoundedRectangle:
+        #     size: self.size
+        #     pos: self.x, self.y 
+            
+        Line:
+            width: 1.5
+            rounded_rectangle: self.x-8, self.y-8, self.width+8, self.height+8, 20, 20, 20, 20, 100 # original: 10, 10, 10, 10, 100
+
+    
+            
+            
+
+# white
+# color: rgba(1, 1, 1, 255)
+# background_color: 1, 1, 1, 0
+
+MDScreen:
+    name: "quiz"
+    question: question
+    
+    MDFloatLayout:
+        MDFloatLayout:
+            size_hint_y: .3
+            pos_hint: {'center_y': .9}
+            canvas: 
+                Color:
+                    rgb: get_color_from_hex("9906c2")
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+
+        MDCard:
+            size_hint: .85, .3
+            pos_hint: {'center_x': 0.5,'center_y': 0.75}
+
+            orientation: "vertical"
+            radius: 24
+            padding: "12dp", "24dp", "12dp", "24dp"
+        
+            MDCard:
+                size_hint: 1, .2
+                pos_hint: {'center_x': 0.5,'center_y': .65}
+                
+                canvas:
+                    Color:
+                        rgb: rgba(240, 96, 7, 1)
+                    RoundedRectangle:
+                        # radius: [44]
+                        size: self.size
+                        pos: self.pos
+                        
+                Label:
+                    id: titel
+                    text: ""
+                    bold: True
+                    line_height: .6
+                    font_style: "H5"
+
+            MDLabel:
+                id: question
+                text: ""
+                font_size: "16sp"
+                halign: "center"
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                # font_style: "H5"
+                # color: 1, 1, 1, 1
+                bold: True
+                # italic: True
+                color: get_color_from_hex("6033f2")
+                
+            MDProgressBar:
+                id: progress1
+                value: 100
+                size_hint: 1, .1
+                opacity: 1
+                pos_hint: {"center_x": .5, "y": .1}
+                color: get_color_from_hex("9906c2")
+
+        
+        MDGridLayout:
+            rows: 3
+            size_hint: .85, .36
+            pos_hint: {'center_x': 0.5,'center_y': 0.38}
+            spacing: 20
+           
+            OptionButton:
+                id: option1
+            OptionButton:
+                id: option2
+            OptionButton:
+                id: option3   
+        MDBoxLayout:
+            id:flags_forward
+            orientation:'vertical'
+            size_hint_y: 0.1
+            opacity:0
+            MDBottomAppBar:
+                id:flags_bottom_bar
+                disabled:True
+                MDToolbar:
+                    icon: 'forward'
+                    type: 'bottom'
+                    on_action_button:app.nasta_question();app.disable_flags_bottom_bar();

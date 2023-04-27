@@ -1,0 +1,463 @@
+<Card>
+    orientation: "vertical"
+    radius: 12
+    padding: "12dp", 0, "12dp", "24dp"
+    ripple_behavior: True
+
+    Image:
+        source: root.source
+
+    MDLabel:
+        text: root.text
+        halign: "center"
+        adaptive_height: True
+        
+        line_height: .6
+        font_size: "14sp"
+
+
+<CircularElevationButton>:
+    size_hint: None, None
+    size: "50dp", "50dp"
+    radius: self.size[0] / 2
+    # md_bg_color: 0, 0, 1, 1
+    icon: ""
+    MDIcon:
+        icon: root.icon
+        halign: "center"
+        valign: "center"
+        size: root.size
+        pos: root.pos
+        font_size: root.size[0] * .6
+        theme_text_color: "Custom"
+        text_color: [1] * 4
+
+
+
+
+MDScreen:
+    name: "nya_sign"
+    
+    # MDRelativeLayout:
+    #     id: image_bg_box
+    #     md_bg_color: get_color_from_hex("#edceba")
+    #     size_hint_y: .45
+    #     pos_hint: {"top": 1}
+
+    #     Image:
+    #         source: "assets/images/undraw_pilates_gpdb.png"
+    #         size_hint: None, None
+    #         size: self.parent.width - dp(72), self.parent.height - dp(72)
+    #         allow_stretch: True
+    #         keep_ratio: False
+    #         x: -dp(20)
+    #         y: dp(40)
+
+
+    
+    canvas.before: 
+        Color:
+            rgb: 1, 1, 1, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            texture: 
+                Gradient.horizontal(
+                get_color_from_hex("#396afc"), 
+                get_color_from_hex("#2948ff")
+                                
+                )  
+    # Button:
+    #     text: "Zanda"
+    #     size_hint: 1, .2
+    #     pos_hint: {'center_x': 0.5,'top': 0.9}
+    MDFloatLayout:
+        
+        # MDToolbar:
+        #     pos_hint: {'top': 1}
+        #     size_hint: 1,.1
+        #     left_action_items: [["menu-left", lambda _: setattr(root.manager, 'current', 'start')]] 
+        #     right_action_items: [["home", lambda _: setattr(root.manager, 'current', 'start')]] 
+        
+        ScrollView:
+            size_hint_y: .92 # Detta kan ändra placeringen
+            # pos_hint: {'center_x': 0.5,'center_y': 0.4}
+            do_scroll_x: False
+            do_scroll_y: True       
+            GridLayout:
+                height: self.minimum_height
+                width: self.minimum_width
+                # height: (root.width, root.height)
+                # size_hint_x: None
+                size_hint_y: None
+                cols: 2
+                spacing: 15
+                padding: 20
+                ButtonCard:
+                    ripple_behavior: True
+                    text: "Entertainment: Film"
+                    on_release: app.select_que(self.text)
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    
+                    
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("c94b4b"), 
+                                get_color_from_hex("4b134f"), 
+                                )
+                            
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        icon: "gesture-tap-button"
+                        md_bg_color: 0, 0 , 0, 0 
+                        
+                    MDLabel:
+                        text: "Entertainment: Film"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.05}
+                        font_size: '16sp'
+                ButtonCard:
+                    ripple_behavior: True
+                    text: "Art"
+                    on_release: app.select_que(self.text)
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]                
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#8E2DE2"), 
+                                get_color_from_hex("#4A00E0"), 
+                                )
+                            
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        icon: "artstation"
+                        md_bg_color: 0, 0 , 0, 0 
+                        
+                    MDLabel:
+                        text: "Art"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.05}
+                        font_size: '16sp'
+                ButtonCard:
+                    # size_hint: .75, .36
+                    ripple_behavior: True
+                    text: "History"
+                    on_release: app.select_que(self.text)
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#ff00cc"), 
+                                get_color_from_hex("#333399"), 
+                                
+                                )
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        icon: "clock-outline"
+                        md_bg_color: 0, 0, 0, 0
+                        
+                    MDLabel:
+                        text: "History"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        font_size: '18sp'
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.05}
+                ButtonCard:
+                    # size_hint: .75, .36
+                    ripple_behavior: True
+                    text: "Music"
+                    on_release: app.select_que(self.text)
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    ripple_behavior: True
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#fe8c00"), 
+                                get_color_from_hex("#f83600"), 
+                                
+                                )
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        icon: "music"
+                        md_bg_color: 0, 0, 0, 0
+                        
+                    MDLabel:
+                        text: "Music"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        font_size: '18sp'
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.05}
+
+                            
+
+                ButtonCard:
+                    text: "World Cup"
+                    on_release: app.select_que(self.text)
+                    ripple_behavior: True
+                    
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    ripple_behavior: True
+                    
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#8E2DE2"), 
+                                get_color_from_hex("#4A00E0"), 
+                                
+                                )
+
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        icon: "soccer"
+                        md_bg_color: 0, 0, 0, 0
+                    MDLabel:
+                        text: "World Cup"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': .001}
+                        font_size: '18sp'
+                ButtonCard:
+                    # size_hint: .75, .36
+                    ripple_behavior: True
+                    text: "Capitals of the World"
+                    on_release: app.select_que(self.text)
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    
+                    
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#DA22FF"), 
+                                get_color_from_hex("#9733EE"),
+                                )
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        # elevation: 24
+                        icon: "database"
+                        md_bg_color: 0, 0, 0, 0
+                    MDLabel:
+                        text: "Capitals of the World"
+                        halign: "center"
+                        pos_hint: {"center_x": .5, "center_y": .5}
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.05}
+                        font_size: '18sp'
+
+                ButtonCard:
+                    # size_hint: .75, .36
+                    ripple_behavior: True
+                    text: "Flags of the World"
+                    on_release: app.select_que(self.text)
+                    orientation: "vertical"
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#00F260"), 
+                                get_color_from_hex("#0575E6"),
+                                )
+
+                    # MDRelativeLayout:
+                    #     # md_bg_color: .8, .8, .8, 1
+                    #     size_hint_y: None
+                    #     height: dp(40)
+                    #     radius: 0, 0, 0, 0
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        # elevation: 24
+                        icon: "flag-variant-outline"
+                        badge_icon: "numeric-10"
+                        md_bg_color: 0, 0, 0, 0
+                    MDLabel:
+                        text: "Flags of the World"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.05}
+                        font_size: '16sp'
+                ButtonCard:
+                    # size_hint: .75, .36
+                    ripple_behavior: True
+                    orientation: "vertical"
+                    text: "Continents of the World"
+                    on_release: app.select_que(self.text)
+                    padding: 8
+                    size_hint: 1, None
+                    height: "105dp"
+                    elevation: 5
+                    border_radius: 20
+                    radius: [15]
+                    
+                    canvas.before:
+                        Color:
+                            rgb: 1, 1, 1, 1
+                        RoundedRectangle:
+                            size: self.size
+                            pos: self.pos
+                            radius: [10, 10,10, 10]
+                            texture:
+                                Gradient.horizontal(
+                                get_color_from_hex("#F7971E"), 
+                                get_color_from_hex("#FFD200"),
+                                )
+
+                    CircularElevationButton:
+                        pos_hint: {"center_x": .5, "center_y": .6}
+                        icon: "map-marker-outline"
+                        icon_size: "22sp"
+                        md_bg_color: 0, 0, 0, 0
+                    MDLabel:
+                        text: "Continents of the World"
+                        halign: "center"
+                        italic: True
+                        adpative_height: True
+                        markup: True
+                        bold: True
+                        font_style: "H5"
+                        color: 1, 1, 1, 1
+                        pos_hint: {'y': 0.1}
+                        font_size: '18sp'
+                
+               
+
+
+<ElementCard@MDCard>:
+    md_bg_color:69/255,55/255,86/255,1
+    orientation: "vertical"
+    padding: 8
+    size_hint: 1, None
+    height: "105dp"
+    elevation: 5
+    border_radius: 20
+    radius:[15]
+    ripple_behavior: True
+    image:''
+    Image:
+        source:root.image

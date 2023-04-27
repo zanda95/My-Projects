@@ -1,0 +1,372 @@
+[
+    {
+      "Info": "Most World Cup appearances (team)",
+      "Record": 20,
+      "Result": "Brazil",
+      "wc_fel": [
+        "Germany",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most World Cup games (team)",
+      "Record": 106,
+      "Result": "Germany",
+      "wc_fel": [
+        "Brazil",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most World Cup wins (team)",
+      "Record": 70,
+      "Result": "Brazil",
+      "wc_fel": [
+        "Germany",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most World Cup victories (player)",
+      "Record": 17,
+      "Result": "Cafu, Brazil (1990-2006)",
+      "wc_fel": [
+        "Carlos, Brazil (1990-2006)",
+        "Rivaldo, Brazil (1990-2002)",
+        "Ronaldo, Brazil (1994-2002)"
+      ]
+    },
+    {
+      "Info": "Most World Cup titles (team)",
+      "Record": 5,
+      "Result": "Brazil",
+      "wc_fel": [
+        "Germany",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most World Cup runners-up (team)",
+      "Record": 4,
+      "Result": "Germany",
+      "wc_fel": [
+        "England",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most Finals (team)",
+      "Record": 8,
+      "Result": "Germany (4 won)",
+      "wc_fel": [
+        "Brazil",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most World Cup participations (Players)",
+      "Record": 5,
+      "Result": "Lothar Matthäus (1982-1998) & Antonio Carbajal (Mexico's goalkeeper, 1950-1966)",
+      "wc_fel": [
+        "Lothar Matthäus (1982-1998) & Marcus (Brazil's goalkeeper, 1994-2002)",
+        "Cafu (1990-2002) & Antonio Carbajal (Mexico's goalkeeper, 1950-1966)",
+        "Cafu (1990-2002) & Calrlos (1994-2006)"
+      ]
+    },
+    {
+      "Info": "Most World Cup titles (player)",
+      "Record": 3,
+      "Result": "Pelé",
+      "wc_fel": [
+        "Miroslav Klose",
+        "Gerd Müller",
+        "Jürgen Klinsmann"
+      ]
+    },
+    {
+      "Info": "Most World Cup games contested (player)",
+      "Record": 25,
+      "Result": "Lothar Matthäus",
+      "wc_fel": [
+        "Miroslav Klose",
+        "Gerd Müller",
+        "Jürgen Klinsmann"
+      ]
+    },
+    {
+      "Info": "Most World Cup game minutes on the pitch (player)",
+      "Record": 2217,
+      "Result": "Paolo Maldini",
+      "wc_fel": [
+        "Cafu",
+        "Gerd Müller",
+        "Denílson de Oliveira"
+      ]
+    },
+    {
+      "Info": "Most World Cup goals (team)",
+      "Record": 224,
+      "Result": "Germany",
+      "wc_fel": [
+        "Brazil",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most World Cup goals in total (player)",
+      "Record": 16,
+      "Result": "Miroslav Klose",
+      "wc_fel": [
+        "Ronaldo",
+        "Gerd Müller",
+        "Just Fontaine"
+      ]
+    },
+    {
+      "Info": "Most World Cup goals in shortest time",
+      "Record": 4,
+      "Result": "Germany",
+      "wc_fel": [
+        "Brazil",
+        "Italy",
+        "Argentina"
+      ]
+    },
+    {
+      "Info": "Most goals in a World Cup (team)",
+      "Record": 27,
+      "Result": "Hungary",
+      "wc_fel": [
+        "Brazil",
+        "Germany",
+        "Netherland"
+      ]
+    },
+    {
+      "Info": "Most goals in a World Cup (player)",
+      "Record": 13,
+      "Result": "Just Fontaine",
+      "wc_fel": [
+        "Ronaldo",
+        "Gerd Müller",
+        "Romario"
+      ]
+    },
+    {
+      "Info": "Most goals in a game (player)",
+      "Record": 5,
+      "Result": "Oleg Salenko",
+      "wc_fel": [
+        "Ronaldo",
+        "Gerd Müller",
+        "Just Fontaine"
+      ]
+    },
+    {
+      "Info": "First World Cup Goal (player)",
+      "Record": "1930, France (in the game against Mexico after 19 minutes)",
+      "Result": "Lucien Laurent",
+      "wc_fel": [
+        "Raul Laurent",
+        "Gerd Laurent",
+        "Micheal Laurent"
+      ]
+    },
+    {
+      "Info": "Youngest player in the game",
+      "Record": "17 years, 41 days (Northern Ireland vs. Yugoslavia, 1982)",
+      "Result": "Norman Whiteside",
+      "wc_fel": [
+        "Lucien Laurent",
+        "Kylian Mbappé",
+        "Just Fontaine"
+      ]
+    },
+    {
+      "Info": "Youngest World Cup scorer",
+      "Record": "17 years",
+      "Result": "Pelé",
+      "wc_fel": [
+        "Norman Whiteside",
+        "Kylian Mbappé",
+        "Just Fontaine"
+      ]
+    },
+    {
+      "Info": "Youngest world champion (player)",
+      "Record": "17 years",
+      "Result": "Pelé ",
+      "wc_fel": [
+        "Norman Whiteside",
+        "Kylian Mbappé",
+        "Just Fontaine"
+      ]
+    },
+    {
+      "Info": "Oldest player in the game",
+      "Record": "42 years, 39 days",
+      "Result": "Essam El-Hadary",
+      "wc_fel": [
+        "Faryd Mondragón",
+        "Roger Milla",
+        "Pat Jennings"
+      ]
+    },
+    {
+      "Info": "The oldest world champion (player)",
+      "Record": "40 years",
+      "Result": "Dino Zoff",
+      "wc_fel": [
+        "Faryd Mondragón",
+        "Roger Milla",
+        "Pat Jennings"
+      ]
+    },
+    {
+      "Info": "World Cup match with most goals",
+      "Record": 12,
+      "Result": "Austria vs. Switzerland",
+      "wc_fel": [
+        "Hungary vs. El Salvador",
+        "Brazil vs. Poland",
+        "Hungary vs Germany"
+      ]
+    },
+    {
+      "Info": "Highest World Cup win",
+      "Record": "10:01",
+      "Result": "Hungary vs. El Salvador",
+      "wc_fel": [
+        "Hungary vs. El Salvador",
+        "Brazil vs. Poland",
+        "Hungary vs Germany"
+      ]
+    },
+    {
+      "Info": "Fastest World Cup goal after kick off",
+      "Record": "11 seconds",
+      "Result": "Hakan Sukur",
+      "wc_fel": [
+        "Bryan Robson",
+        "Florian Albert",
+        "Vaclav Masek"
+      ]
+    },
+    {
+      "Info": "Most World Cup minutes without conceding a goal (goalkeeper)",
+      "Record": 517,
+      "Result": "Walter Zenga",
+      "wc_fel": [
+        "Gianluigi Buffon",
+        "Oliver Kahn",
+        "Vaclav Masek"
+      ]
+    },
+    {
+      "Info": "Most World Cup participation (trainer)",
+      "Record": 6,
+      "Result": "Carlos Alberto Parreira",
+      "wc_fel": [
+        "Paulo Bento",
+        "Carlos Queiroz",
+        "Vaclav Masek"
+      ]
+    },
+    {
+      "Info": "Most World Cup games (coach)",
+      "Record": 25,
+      "Result": "Helmut Schön",
+      "wc_fel": [
+        "Carlos Alberto Parreira",
+        "Carlos Queiroz",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "Most World Cup victories (trainer)",
+      "Record": 16,
+      "Result": "Helmut Schön",
+      "wc_fel": [
+        "Carlos Alberto Parreira",
+        "Carlos Queiroz",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "Most World Cup titles (trainer)",
+      "Record": 2,
+      "Result": "Vittorio Pozzo (Italy, 1934 and 1938)",
+      "wc_fel": [
+        "Carlos Alberto Parreira",
+        "Helmut Schön",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "World Cup titles (as player and coach)",
+      "Record": 3,
+      "Result": "Mário Zagallo",
+      "wc_fel": [
+        "Carlos Alberto Parreira",
+        "Helmut Schön",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "Youngest coach at a World Cup",
+      "Record": "27 years",
+      "Result": "Juan José Tramutola (Argentina, 1930)",
+      "wc_fel": [
+        "Carlos Alberto Parreira",
+        "Mário Zagallo",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "Oldest coach at a World Cup",
+      "Record": "71 years",
+      "Result": "Otto Rehhagel (Greece, 2010)",
+      "wc_fel": [
+        "Carlos Alberto Parreira",
+        "Mário Zagallo",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "First sending-off in World Cup history",
+      "Record": 1930,
+      "Result": "Placido Galindo",
+      "wc_fel": [
+        "Diego Maradona",
+        "Mário Zagallo",
+        "Paulo Bento"
+      ]
+    },
+    {
+      "Info": "Most sending-offs in one game",
+      "Record": 4,
+      "Result": "Portugal vs. Netherlands",
+      "wc_fel": [
+        "Brazil vs. Turkey",
+        "Italy vs. Germany",
+        "Argentina vs. Greece"
+      ]
+    },
+    {
+      "Info": "Most yellow cards in one game",
+      "Record": "16, 2002",
+      "Result": "Germany vs. Cameroon",
+      "wc_fel": [
+        "Brazil vs. Turkey",
+        "Portugal vs. Netherlands",
+        "Italy vs. Germany"
+      ]
+    }
+]

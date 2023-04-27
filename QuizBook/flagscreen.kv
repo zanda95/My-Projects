@@ -1,0 +1,130 @@
+<QuizModeToolbar1@MDCard>:
+    md_bg_color: (159/256,189/256,237/256,1)
+    radius:[dp(0),dp(0),dp(40),dp(40)]
+    size_hint: 1,0.2
+    elevation: 30
+    
+    question:''
+    card_bg_color: (140/256,189/256,237/256,1)
+
+    BoxLayout:
+        BoxLayout:
+            size_hint_x:0.1    
+        MDLabel:
+            text: root.question
+            font_style:"H5"
+            font_size:self.width/20
+        BoxLayout:
+            size_hint_x:0.1   
+
+
+<ImageButton2>:
+    
+    # padding: dp(15)
+    # spacing: dp(15)
+    radius: [dp(25),dp(25),dp(25),dp(25)]
+    ripple_behavior: False
+    elevation:30
+    source: root.image_source 
+    md_bg_color: get_color_from_hex("c1cbe3") 
+    canvas.before:
+        Color:
+            rgb: root.md_bg_color
+        Line:
+            width: 1.5
+            rounded_rectangle: self.x-4, self.y-4, self.width+4, self.height+4, 20, 20, 20, 20, 100 # original: 10, 10, 10, 10, 100  
+    
+
+MDScreen:
+    name: "Flags of the World"
+
+    MDFloatLayout:
+        MDFloatLayout:
+            size_hint_y: .3
+            pos_hint: {'center_y': .9}
+            canvas: 
+                Color:
+                    rgb: get_color_from_hex("9906c2")
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+
+        MDCard:
+            size_hint: .85, .3
+            pos_hint: {'center_x': 0.5,'center_y': 0.75}
+
+            orientation: "vertical"
+            radius: 24
+            padding: "12dp", "24dp", "12dp", "24dp"
+        
+            MDCard:
+                size_hint: 1, .2
+                pos_hint: {'center_x': 0.5,'center_y': .65}
+                
+                canvas:
+                    Color:
+                        rgb: rgba(240, 96, 7, 1)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        
+                Label:
+                    id: titel
+                    text: ""
+                    bold: True
+                    line_height: .6
+                    font_style: "H5"
+                
+            MDLabel:
+                id: flag_toolbar
+                text: ""
+                font_size: "16sp"
+                halign: "center"
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                # font_style: "H5"
+                # color: 1, 1, 1, 1
+                bold: True
+                # italic: True
+                color: get_color_from_hex("6033f2")
+            
+            MDProgressBar:
+                id: progress1
+                value: 100
+                size_hint: 1, .1
+                opacity: 1
+                pos_hint: {"center_x": .5, "y": .1}
+                color: get_color_from_hex("9906c2")
+
+        
+        MDGridLayout:
+            rows: 2
+            cols: 2
+            size_hint: .85, .36
+            pos_hint: {'center_x': 0.5,'center_y': 0.38}
+            spacing: 20
+            
+            ImageButton2:
+                id:country0
+                on_release: app.nya_quiz(self.source, self) 
+            ImageButton2:
+                id:country1
+                on_release: app.nya_quiz(self.source, self)
+            ImageButton2:
+                id:country2
+                on_release: app.nya_quiz(self.source, self)
+            ImageButton2:
+                id:country3
+                on_release: app.nya_quiz(self.source, self)
+        MDBoxLayout:
+            id:flags_forward
+            orientation:'vertical'
+            size_hint_y: 0.1
+            opacity:0
+            MDBottomAppBar:
+                id:flags_bottom_bar
+                disabled:True
+                MDToolbar:
+                    icon: 'forward'
+                    type: 'bottom'
+                    on_action_button:app.nasta_bild();app.new_disable_flags_bottom_bar();

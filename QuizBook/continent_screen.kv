@@ -1,0 +1,119 @@
+<ContinentButton>
+    
+    padding: dp(15)
+    spacing: dp(15)
+    # radius: [dp(25),dp(25),dp(25),dp(25)]
+    ripple_behavior: False
+    elevation:30
+    source: root.image_source
+    md_bg_color: get_color_from_hex("c1cbe3")
+
+    canvas.before:
+        Color:
+            rgb: root.md_bg_color
+        Line:
+            width: 1.5
+            rounded_rectangle: self.x-8, self.y-8, self.width+16, self.height+16, 20, 20, 20, 20, 100 # original: 10, 10, 10, 10, 100  
+    
+
+MDScreen:
+    name: "Continents of the World"
+
+    MDFloatLayout:
+        MDFloatLayout:
+            size_hint_y: .3
+            pos_hint: {'center_y': .92}
+            canvas: 
+                Color:
+                    rgb: get_color_from_hex("9906c2")
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [20]
+
+        MDCard:
+            size_hint: .85, .27
+            pos_hint: {'center_x': 0.5,'center_y': 0.8}
+
+            orientation: "vertical"
+            radius: 24
+            padding: "12dp", "24dp", "12dp", "24dp"
+        
+            MDCard:
+                size_hint: 1, .2
+                pos_hint: {'center_x': 0.5,'center_y': .85}
+                
+                canvas.before:
+                    Color:
+                        rgb: rgba(240, 96, 7, 1)
+                    RoundedRectangle:
+                        size: self.size
+                        pos: self.pos
+                        
+                Label:
+                    id: titel
+                    text: ""
+                    bold: True
+                    line_height: .6
+                    font_style: "H5"
+                
+            MDLabel:
+                id: continent_toolbar
+                text: ""
+                font_size: "16sp"
+                halign: "center"
+                pos_hint: {'center_x': 0.5,'center_y': 0.5}
+                # font_style: "H5"
+                # color: 1, 1, 1, 1
+                bold: True
+                # italic: True
+                color: get_color_from_hex("6033f2")
+            
+            MDProgressBar:
+                id: progress1
+                value: 100
+                size_hint: 1, .1
+                opacity: 1
+                pos_hint: {"center_x": .5, "y": .1}
+                color: get_color_from_hex("9906c2")
+
+        
+        MDGridLayout:
+            rows: 3
+            cols: 2
+            size_hint: .85, .48
+            pos_hint: {'center_x': 0.5,'center_y': 0.41}
+            spacing: 30
+            padding: 20
+            
+            ContinentButton:
+                id:continen0
+                on_release: app.nya_quiz(self.source, self) 
+            ContinentButton:
+                id:continen1
+                on_release: app.nya_quiz(self.source, self)
+            ContinentButton:
+                id:continen2
+                on_release: app.nya_quiz(self.source, self)
+            ContinentButton:
+                id:continen3
+                on_release: app.nya_quiz(self.source, self)
+            ContinentButton:
+                id:continen4
+                on_release: app.nya_quiz(self.source, self)
+            ContinentButton:
+                id:continen5
+                on_release: app.nya_quiz(self.source, self)
+                
+        MDBoxLayout:
+            id:flags_forward
+            
+            size_hint_y: 0.1
+            opacity:0
+            MDBottomAppBar:
+                id:flags_bottom_bar
+                disabled:True
+                MDToolbar:
+                    icon: 'forward'
+                    type: 'bottom'
+                    on_action_button:app.next_continent();app.disable_continent_bottom_bar();

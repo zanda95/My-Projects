@@ -1,0 +1,62 @@
+#:import Gradient kivy_gradient.Gradient
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+
+MDScreen:
+    name: "start"
+    
+    MDFloatLayout:
+        canvas: 
+            Color:
+                rgb: 1, 1, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                
+                texture:
+                    Gradient.vertical(
+                    get_color_from_hex("7F00FF"), 
+                    get_color_from_hex("E100FF"), 
+                    )
+
+        Image:
+            source: "go.png" 
+            size_hint: .6, .2
+            pos_hint: {'center_x': 0.5,'center_y': 0.7}
+   
+        
+
+        MDFloatLayout:
+            size_hint: .7, .075
+            pos_hint: {'center_x': 0.5,'center_y': .4}
+            canvas:
+                Color:
+                    rgb: 1, 1, 1, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [15]
+                    texture: 
+                        Gradient.horizontal(
+                        get_color_from_hex("#FFE000"), 
+                        get_color_from_hex("#799F0C")
+                        )
+        
+            Button:
+                text: "Play"
+                background_color: 0, 0, 0, 0
+                font_size: "30sp"
+                pos_hint: {'center_x': 0.4,'center_y': .5}
+                bold: True
+                italic: True
+                on_release:
+                    root.manager.current = "nya_sign"
+            MDIconButton:
+                icon: "play"        
+                on_release: app.root.transition.direction = 'left'; root.manager.current = "nya_sign";
+                pos_hint: {"center_x":0.8,"center_y":0.5}
+                theme_text_color: "Custom"
+                text_color: get_color_from_hex("FFFFFF")
+                user_font_size: "30sp"
+        
+    
+

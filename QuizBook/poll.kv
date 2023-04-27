@@ -1,0 +1,176 @@
+<PollSection>:
+    name: "PollSection"
+    
+    id: PollSection
+    
+    total_label: total_label
+
+    progress1: progress1
+    progress2: progress2
+    progress3: progress3
+    progress4: progress4
+
+    
+    MDFloatLayout:
+        md_bg_color: 1,1,1,1
+        MDToolbar:
+            pos_hint: {'top': 1}
+            size_hint: 1,.05
+            right_action_items: [["home", lambda _: setattr(root.manager, 'current', 'home_sida')],["account-outline", lambda _: setattr(root.manager, 'current', 'sign_in')] ] 
+            left_action_items: [["rotate-3d-variant", lambda x: root.flip()]] 
+        
+        MDFloatLayout:
+            size_hint: .8, .1
+            pos_hint: {"center_x": .5, "center_y": .75 }
+            canvas: 
+                Color:
+                    rgb: 1, 1, 1, 1
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+
+                    texture: 
+                        Gradient.horizontal(
+                        get_color_from_hex("#FDC830"), 
+                        get_color_from_hex("#F37335"))
+                    
+                    
+            MDLabel:
+                id: que_label
+                text: "Hur är det på rasterna?"
+                theme_text_color: "Custom"
+                text_color: 1, 1 , 1, 1
+                pos_hint: {"center_x": .5, "center_y": .5}
+                halign: "center"
+                bold: True
+                italic: True
+                font_size: "28sp" 
+            
+            MDIconButton:
+                icon: "pencil-outline"
+                pos_hint: {"center_x": .95, "center_y": .7}
+        			
+                
+        ButtonCard:
+            id: option1_knappen
+            md_bg_color: 241/255, 241/255, 241/255, 1
+            size_hint: .5, .1
+            pos_hint: {"center_x": .5, "center_y": .6}
+            radius: [10]
+            padding: "10dp"
+            on_release: root.count(self)
+            
+            MDFloatLayout:
+                MDLabel:
+                    text: "Jättebra"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    font_size: "20sp"
+                MDLabel:
+                    id: text1
+                    text: ""
+                    halign: "right"
+                    pos_hint: {"center_x": .51, "center_y": .7}
+                    font_size: "20sp"
+                MDProgressBar:
+                    id: progress1
+                    value: 0
+                    pos_hint: {"center_x": .5, "center_y": .1}
+                    color: 14/255, 230/255, 17/255, 1
+        ButtonCard:
+            id: option2_knappen
+            size_hint: .5, .1
+            pos_hint: {"center_x": .5, "center_y": .48}
+            md_bg_color: 241/255, 241/255, 241/255, 1
+            radius: [10]
+            padding: "10dp"
+            on_release: root.count(self)
+            
+            MDFloatLayout:
+                MDLabel:
+                    text: "Bra"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    font_size: "20sp"
+                MDLabel:
+                    id: text2
+                    text: ""
+                    halign: "right"
+                    pos_hint: {"center_x": .51, "center_y": .7}
+                    font_size: "20sp"
+                MDProgressBar:
+                    id: progress2
+                    value: 0
+                    pos_hint: {"center_x": .5, "center_y": .1}
+                    color: 30/255, 144/255, 255/255, 1
+        ButtonCard:
+            id: option3_knappen
+            size_hint: .5, .1
+            pos_hint: {"center_x": .5, "center_y": .36}
+            md_bg_color: 241/255, 241/255, 241/255, 1
+            radius: [10]
+            padding: "10dp"
+            on_release: root.count(self)
+            MDFloatLayout:
+                MDLabel:
+                    text: "Dåligt"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    font_size: "20sp"
+                MDLabel:
+                    id: text3
+                    text: ""
+                    halign: "right"
+                    pos_hint: {"center_x": .51, "center_y": .7}
+                    font_size: "20sp"
+                MDProgressBar:
+                    id: progress3
+                    value: 0
+                    pos_hint: {"center_x": .5, "center_y": .1}
+                    color: app.theme_cls.accent_color
+        ButtonCard:
+            id: option4_knappen
+            size_hint: .5, .1
+            pos_hint: {"center_x": .5, "center_y": .24}
+            md_bg_color: 241/255, 241/255, 241/255, 1
+            radius: [10]
+            padding: "10dp"
+            on_release: root.count(self)
+            
+
+            MDFloatLayout:
+                MDLabel:
+                    text: "Jättedåligt"
+                    pos_hint: {"center_x": .5, "center_y": .7}
+                    font_size: "20sp"
+                MDLabel:
+                    id: text4
+                    text: ""
+                    halign: "right"
+                    pos_hint: {"center_x": .51, "center_y": .7}
+                    font_size: "20sp"
+                MDProgressBar:
+                    id: progress4
+                    value: 0
+                    pos_hint: {"center_x": .5, "center_y": .1}
+                    color: 245/255, 11/255, 7/255, 1
+
+        
+        MDLabel:
+            text: "Röster:"
+            background_color: 255/255, 126/255, 0/255, 1
+            pos_hint: {"right": .97, "center_y": .9}
+            size_hint: .25, .15
+            halign: "center"
+            theme_text_color: "Secondary"
+            
+            italic: True
+            
+        MDLabel:
+            id: total_label
+            text: "0"
+            background_color: 255/255, 126/255, 0/255, 1
+            pos_hint: {"right": .97, "center_y": .86}
+            size_hint: .25, .15
+            halign: "center"
+            theme_text_color: "Primary"
+            font_style:"H5"
+            bold: True
+            italic: True

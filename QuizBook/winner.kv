@@ -1,0 +1,297 @@
+<CircularProgressBar>
+    canvas.before:
+        Color:
+            rgba: root.bar_color + [0.3]
+        Line:
+            width: root.bar_width
+            ellipse: (self.x, self.y, self.width, self.height, 0, 360)
+    canvas.after:
+        Color:
+            rgb: root.bar_color 
+        Line:
+            width: root.bar_width
+            ellipse: (self.x, self.y, self.width, self.height, 0, root.set_value*3.6)
+    MDLabel:
+        text: root.text
+        font_size: "20sp"
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        halign: "center"
+        color: root.bar_color
+
+MDScreen:
+    name: "winner"
+    
+    image: image
+
+    correct: correct
+    wrong: wrong
+    antal: antal
+    # success_rate: success_rate
+    test_bar: test_bar
+
+    canvas:
+        Color:
+            rgb: 1, 1, 1, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            
+            texture:
+                Gradient.horizontal(
+                get_color_from_hex("7F00FF"), 
+                get_color_from_hex("E100FF"), 
+                )
+    
+    MDFloatLayout:
+        Image:
+            id: image
+            source: ""
+            anim_delay: 0.1
+            keep_data: True
+            mipmap: True
+            allow_stretch: True
+            pos_hint: {'center_x': 0.5,'center_y': 0.85}
+            size_hint: 1, .2
+            # MDLabel:
+            #     id: success_rate
+            #     text: ""
+            #     font_size: "12sp"
+            #     halign: "center"
+            #     pos_hint: {'center_x': 0.5,'center_y': 0.45}
+            #     size_hint: .8, .05
+            #     color: 1, 1, 1, 1
+            #     line_height: 1.1
+            #     canvas.before:
+            #         Color:
+            #             rgb:rgba(40, 6, 109, 255)
+            #         RoundedRectangle:
+            #             size: self.size
+            #             pos: self.x, self.y + 5
+            #             radius: [10]
+        MDCard:
+            
+            size_hint: .85, .5
+            pos_hint: {'center_x': 0.5,'center_y': 0.45}
+
+            orientation: "vertical"
+            radius: 24
+            padding: "12dp", "24dp", "12dp", "24dp"
+
+            # MDLabel:
+            #     text: "Test Result"
+            #     halign: "left"
+                
+        
+            # MDCard:
+            #     size_hint: 1, .2
+            #     pos_hint: {'center_x': 0.5,'center_y': .65}
+                
+            #     canvas:
+            #         Color:
+            #             rgb: rgba(240, 96, 7, 1)
+            #         RoundedRectangle:
+            #             # radius: [44]
+            #             size: self.size
+            #             pos: self.pos
+                    
+            # Label:
+                
+            #     text: ""
+            #     bold: True
+            #     line_height: .6
+            #     font_style: "H5"
+
+            MDFloatLayout:
+                
+                spacing: 24
+                
+                CircularProgressBar:
+                    id: test_bar
+                    size_hint: None, None
+                    size: 100, 100
+                    
+                    pos_hint: {'center_x': 0.5,'center_y': 0.7}
+                    
+                    value: 80
+                    
+                
+                MDGridLayout:
+                    cols: 3
+                    rows: 3
+                    size_hint: 1, 0.4
+                    spacing: 24
+                    padding: 8
+                    pos_hint: {'center_x': 0.5,'center_y': 0.1}
+                    ButtonCard:
+                        
+                        text: ""
+                        orientation: "vertical"
+                        padding: 8
+                        spacing: 24
+                        size_hint: 1, None
+                        height: "20dp"
+                        elevation: 5
+                        border_radius: 20
+                        radius: [15]
+                        
+                        
+                        canvas.before:
+                            Color:
+                                rgb: 1, 1, 1, 1
+                            RoundedRectangle:
+                                size: self.size
+                                pos: self.pos
+                                radius: [10, 10,10, 10]
+                                texture:
+                                    Gradient.horizontal(
+                                    get_color_from_hex("000000"), 
+                                    get_color_from_hex("0f9b0f"), 
+                                    )
+
+                        MDLabel:
+                            id: correct
+                            text: ""
+                            halign: "center"
+                            italic: True
+                            adpative_height: True
+                            markup: True
+                            bold: True
+                            font_style: "H5"
+                            color: 1, 1, 1, 1
+                            pos_hint: {'y': 0.05}
+                            font_size: '16sp'
+                    ButtonCard:
+                        
+                        text: ""
+                        orientation: "vertical"
+                        padding: 8
+                        spacing: 24
+                        size_hint: 1, None
+                        height: "20dp"
+                        elevation: 5
+                        border_radius: 20
+                        radius: [15]
+                        
+                        
+                        canvas.before:
+                            Color:
+                                rgb: 1, 1, 1, 1
+                            RoundedRectangle:
+                                size: self.size
+                                pos: self.pos
+                                radius: [10, 10,10, 10]
+                                texture:
+                                    Gradient.horizontal(
+                                    get_color_from_hex("ED213A"), 
+                                    get_color_from_hex("93291E"), 
+                                    )
+
+                        MDLabel:
+                            id: wrong
+                            text: ""
+                            halign: "center"
+                            italic: True
+                            adpative_height: True
+                            markup: True
+                            bold: True
+                            font_style: "H5"
+                            color: 1, 1, 1, 1
+                            pos_hint: {'y': 0.05}
+                            font_size: '16sp'
+                    ButtonCard:
+                        
+                        text: ""
+                        orientation: "vertical"
+                        padding: 8
+                        spacing: 24
+                        size_hint: 1, None
+                        height: "20dp"
+                        elevation: 5
+                        border_radius: 20
+                        radius: [15]
+                        
+                        
+                        canvas.before:
+                            Color:
+                                rgb: 1, 1, 1, 1
+                            RoundedRectangle:
+                                size: self.size
+                                pos: self.pos
+                                radius: [10, 10,10, 10]
+                                texture:
+                                    Gradient.horizontal(
+                                    get_color_from_hex("0575E6"), 
+                                    get_color_from_hex("021B79"), 
+                                    )
+
+                        MDLabel:
+                            id: antal
+                            text: ""
+                            halign: "center"
+                            italic: True
+                            adpative_height: True
+                            markup: True
+                            bold: True
+                            font_style: "H5"
+                            color: 1, 1, 1, 1
+                            pos_hint: {'y': 0.05}
+                            font_size: '16sp'
+                                
+                
+                    MDLabel:
+                        text: "Correct"
+                        font_size: "12sp"
+                        halign: "center"
+                        bold: True
+                        italic: True
+                    MDLabel:
+                        text: "Wrong"
+                        font_size: "12sp"
+                        halign: "center"
+                        bold: True
+                        italic: True
+                    MDLabel:
+                        text: "Number of questions"
+                        font_size: "12sp"
+                        halign: "center"
+                        bold: True
+                        italic: True
+    
+    
+    NavBar:
+        size_hint: .6, .1
+        pos_hint: {'center_x': 0.5,'center_y': 0.1}
+        elevation: 10
+        md_bg_color: 1, 1, 1, 1
+        radius: [16]
+        MDIconButton:
+            icon: "home"
+            ripple_scale: 0
+            user_font_size: "30sp"
+            pos_hint: {'center_x': 0.5,'center_y': 0.5}
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("E100FF")
+            on_release: app.root.transition.direction = 'left'; app.replay();  
+        MDIconButton:
+            icon: "replay"
+            ripple_scale: 0
+            user_font_size: "30sp"
+            pos_hint: {'center_x': 0.2,'center_y': 0.5}
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("E100FF")
+            on_release: app.root.transition.direction = 'left'; app.replay();  
+        
+        MDIconButton:
+            icon: "list-status"
+            on_release: app.move()
+            pos_hint: {'center_x': 0.8,'center_y': 0.5}
+            theme_text_color: "Custom"
+            text_color: get_color_from_hex("E100FF")
+            user_font_size: "30sp"
+            ripple_scale: 0
+            
+            
+        
+
+
+    
