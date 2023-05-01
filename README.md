@@ -1,4 +1,4 @@
-Trivia Quest with KivyMD
+**Trivia Quest with KivyMD**
 
 This is a Python-based quiz application built using the KivyMD framework that allows users to answer questions from different categories and levels. The app is designed to be cross-platform, which means it can run on various operating systems like Android, iOS and Windows.
 
