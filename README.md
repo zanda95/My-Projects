@@ -10,7 +10,7 @@ You can install the KivyMD framework using pip:
 To run the app, download the code from the GitHub repository, and run the following command in the terminal:
 `python main.py`
 
-**Usage**
+**Usage** 
 The app has a simple user interface, making it easy to navigate. Users can select a category and a level to start answering questions. The app has four categories: geography, history, science, and general knowledge. Each category has three levels of difficulty: easy, medium, and hard.
 Once a user has selected the category and level, they will be presented with a set of questions. Users can select one answer from a list of multiple choices. After answering all the questions, the app will display the score and the correct answers.
 
