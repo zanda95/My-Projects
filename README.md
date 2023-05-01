@@ -12,7 +12,6 @@ To run the app, download the code from the GitHub repository, and run the follow
 
 **Usage**
 The app has a simple user interface, making it easy to navigate. Users can select a category and a level to start answering questions. The app has four categories: geography, history, science, and general knowledge. Each category has three levels of difficulty: easy, medium, and hard.
-
 Once a user has selected the category and level, they will be presented with a set of questions. Users can select one answer from a list of multiple choices. After answering all the questions, the app will display the score and the correct answers.
 
 The app also has a leaderboard that displays the top scores of all users. Users can submit their score to the leaderboard by entering their name at the end of the quiz. This function is under developing.
