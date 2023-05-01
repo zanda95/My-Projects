@@ -19,9 +19,7 @@ Once a user has selected the category and level, they will be presented with a s
 The app also has a leaderboard that displays the top scores of all users. Users can submit their score to the leaderboard by entering their name at the end of the quiz. This function is under developing.
 
 **Contributing**
-
 This is an open-source project, and contributions are welcome. If you find a bug or have a feature request, please open an issue on the GitHub repository.
 
 **License**
-
 This project is licensed under the MIT License. You can find more information in the LICENSE file.
