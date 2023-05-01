@@ -7,7 +7,6 @@ Before running the app, make sure you have the latest version of Python and Kivy
 
 You can install the KivyMD framework using pip:
 `pip install kivymd`
-
 To run the app, download the code from the GitHub repository, and run the following command in the terminal:
 `python main.py`
 
