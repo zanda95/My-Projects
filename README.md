@@ -6,10 +6,10 @@ This is a Python-based quiz application built using the KivyMD framework that al
 Before running the app, make sure you have the latest version of Python and KivyMD installed on your machine.
 
 You can install the KivyMD framework using pip:
-pip install kivymd
+`pip install kivymd`
 
 To run the app, download the code from the GitHub repository, and run the following command in the terminal:
-python main.py
+`python main.py`
 
 **Usage**
 The app has a simple user interface, making it easy to navigate. Users can select a category and a level to start answering questions. The app has four categories: geography, history, science, and general knowledge. Each category has three levels of difficulty: easy, medium, and hard.
