@@ -344,7 +344,7 @@ class QuizApp(MDApp):
         global screen_manager
         screen_manager = ScreenManager(transition=NoTransition())
 
-        self.title= "QuizBook"
+        self.title= "Trivia Quest"
         
         screen_manager.add_widget(Builder.load_file("start.kv"))
         screen_manager.add_widget(Builder.load_file("select_sign.kv"))
